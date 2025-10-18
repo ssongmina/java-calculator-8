@@ -30,8 +30,7 @@ public class CalculatorController {
         ArrayList<Integer> numbers = parseString(input);
 
         // 결과값 계산
-        //return addNum(numbers);
-        return 0;
+        return addNum(numbers);
     }
 
     public void validate(String input){
@@ -89,5 +88,10 @@ public class CalculatorController {
         return numbers;
     }
 
+    public int addNum(ArrayList<Integer> numbers){
+        return numbers.stream()
+                .mapToInt(Integer::intValue)
+                .sum();
+    }
 
 }
