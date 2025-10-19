@@ -3,17 +3,17 @@ package calculator.model;
 public class Calculator {
 
     private boolean hasDelimiter;
-    private String delimiter;
+    private char delimiter;
 
     public Calculator(){
         hasDelimiter = false;
     }
 
-    public String getDelimiter(){
+    public char getDelimiter(){
         return  delimiter;
     }
 
-    public void setDelimiter(String delimiter){
+    public void setDelimiter(char delimiter){
         this.delimiter = delimiter;
         hasDelimiter = true;
     }
@@ -22,7 +22,5 @@ public class Calculator {
         return hasDelimiter;
     }
 
-    public int getDelimiterSize(){
-        return  delimiter.length();
-    }
+
 }
